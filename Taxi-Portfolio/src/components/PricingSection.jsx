@@ -63,7 +63,7 @@ export default function PricingSection() {
   };
 
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-white to-gray-50">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[linear-gradient(to_bottom,white,rgb(249_250_251))]">
       <div className="container mx-auto max-w-7xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -107,7 +107,7 @@ export default function PricingSection() {
               >
                 {/* Icon */}
                 <div
-                  className={`w-16 h-16 rounded-2xl bg-linear-to-br ${plan.color} flex items-center justify-center mb-6 shadow-lg`}
+                  className={`w-16 h-16 rounded-2xl bg-[linear-gradient(to_bottom_right,var(--tw-gradient-stops))] ${plan.color} flex items-center justify-center mb-6 shadow-lg`}
                 >
                   <plan.icon className="w-8 h-8 text-white" strokeWidth={2} />
                 </div>

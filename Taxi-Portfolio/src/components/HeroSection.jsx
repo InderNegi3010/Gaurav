@@ -23,7 +23,7 @@ export default function HeroSection() {
           alt="Taxi Driver"
           className="w-full h-full object-cover"
         />
-        <div className="absolute inset-0 bg-linear-to-r from-black/80 via-black/60 to-black/40" />
+        <div className="absolute inset-0 bg-[linear-gradient(to_right,rgb(0_0_0/0.8),rgb(0_0_0/0.6),rgb(0_0_0/0.4))]" />
       </div>
 
       {/* Content */}

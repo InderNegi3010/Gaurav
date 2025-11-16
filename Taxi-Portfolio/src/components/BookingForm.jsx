@@ -27,7 +27,7 @@ export default function BookingForm() {
   return (
     <section
       id="booking-section"
-      className="py-20 px-4 sm:px-6 lg:px-8 bg-linear-to-b from-[#FAFAF9] to-white"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-[linear-gradient(to_bottom,#FAFAF9,white)]"
     >
       <div className="container mx-auto max-w-4xl">
         <motion.div
