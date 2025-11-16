@@ -137,7 +137,7 @@ export default function BookingForm() {
 
               <Button
                 type="submit"
-                className="w-full h-14 bg-black hover:bg-gray-900 text-yellow-400 font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
+                className="w-full h-14 bg-black hover:bg-gray-900 text-yellow-400 flex justify-center items-center font-bold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02]"
               >
                 Get Fare Estimate
                 <ArrowRight className="w-5 h-5 ml-2" />

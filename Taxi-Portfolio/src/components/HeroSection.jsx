@@ -90,7 +90,7 @@ export default function HeroSection() {
               <Button
                 onClick={scrollToBooking}
                 size="lg"
-                className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold px-8 py-6 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold flex justify-center items-center px-10 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 <Calendar className="w-5 h-5 mr-2" />
                 Book Now
@@ -99,7 +99,7 @@ export default function HeroSection() {
                 onClick={handleCall}
                 size="lg"
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-black font-semibold px-8 py-6 text-lg rounded-xl backdrop-blur-sm bg-white/10 transition-all duration-300 hover:scale-105"
+                className="border-2 flex justify-center items-center border-white text-white hover:bg-white hover:text-black font-semibold px-10 py-4 text-lg rounded-xl backdrop-blur-sm bg-white/10 transition-all duration-300 hover:scale-105"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call Driver

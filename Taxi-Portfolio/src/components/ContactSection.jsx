@@ -205,7 +205,7 @@ export default function ContactSection() {
 
                 <Button
                   type="submit"
-                  className="w-full h-12 bg-black hover:bg-gray-900 text-yellow-400 font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  className="w-full h-12 bg-black flex items-center justify-center hover:bg-gray-900 text-yellow-400 font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   Send Message
                   <Send className="w-4 h-4 ml-2" />
