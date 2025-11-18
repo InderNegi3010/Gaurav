@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
 import { Label } from "@/components/ui/label";
+import { SITE_CONFIG, makeCall, openWhatsApp, sendEmail } from "@/config";
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -20,26 +21,8 @@ export default function ContactSection() {
     setFormData({ name: "", email: "", message: "" });
   };
 
-  const handleCall = () => {
-    window.location.href = "tel:+919876543210";
-  };
-
-  const handleWhatsApp = () => {
-    const phone = "+919876543210";
-    const message =
-      "Hi, I want to book a taxi. Please share your availability.";
-    window.open(
-      `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
-      "_blank"
-    );
-  };
-
-  const handleEmail = () => {
-    window.location.href = "mailto:inder.taxi@example.com";
-  };
-
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-[linear-gradient(to_bottom,rgb(249_250_251),white)]">
+    <section id="contact-section" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -51,7 +34,7 @@ export default function ContactSection() {
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Get In Touch
           </h2>
-          <p className="text-xl text-gray-600">We're here to help you 24/7</p>
+          <p className="text-xl text-gray-600">We're here to help you {SITE_CONFIG.business.availability}</p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -76,7 +59,7 @@ export default function ContactSection() {
             {/* Contact Buttons */}
             <div className="space-y-4">
               <Button
-                onClick={handleCall}
+                onClick={makeCall}
                 className="w-full h-16 bg-green-600 hover:bg-green-700 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] justify-start px-6"
               >
                 <div className="flex items-center gap-4">
@@ -85,13 +68,13 @@ export default function ContactSection() {
                   </div>
                   <div className="text-left">
                     <div className="text-sm opacity-90">Call Now</div>
-                    <div className="font-bold">+91 98765 43210</div>
+                    <div className="font-bold">{SITE_CONFIG.contact.phoneDisplay}</div>
                   </div>
                 </div>
               </Button>
 
               <Button
-                onClick={handleWhatsApp}
+                onClick={() => openWhatsApp()}
                 className="w-full h-16 bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] justify-start px-6"
               >
                 <div className="flex items-center gap-4">
@@ -106,7 +89,7 @@ export default function ContactSection() {
               </Button>
 
               <Button
-                onClick={handleEmail}
+                onClick={sendEmail}
                 className="w-full h-16 bg-blue-600 hover:bg-blue-700 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] justify-start px-6"
               >
                 <div className="flex items-center gap-4">
@@ -115,7 +98,7 @@ export default function ContactSection() {
                   </div>
                   <div className="text-left">
                     <div className="text-sm opacity-90">Email</div>
-                    <div className="font-bold">inder.taxi@example.com</div>
+                    <div className="font-bold">{SITE_CONFIG.contact.email}</div>
                   </div>
                 </div>
               </Button>
@@ -127,7 +110,7 @@ export default function ContactSection() {
               <div className="space-y-2 text-gray-700">
                 <div className="flex justify-between">
                   <span>Monday - Sunday</span>
-                  <span className="font-semibold">24/7</span>
+                  <span className="font-semibold">{SITE_CONFIG.business.availability}</span>
                 </div>
                 <p className="text-sm text-gray-600 mt-3">
                   Available round the clock for your convenience
@@ -163,6 +146,7 @@ export default function ContactSection() {
                       setFormData({ ...formData, name: e.target.value })
                     }
                     className="h-12 border-2 border-gray-200 focus:border-yellow-400 rounded-xl"
+                    required
                   />
                 </div>
 
@@ -182,6 +166,7 @@ export default function ContactSection() {
                       setFormData({ ...formData, email: e.target.value })
                     }
                     className="h-12 border-2 border-gray-200 focus:border-yellow-400 rounded-xl"
+                    required
                   />
                 </div>
 
@@ -200,6 +185,7 @@ export default function ContactSection() {
                       setFormData({ ...formData, message: e.target.value })
                     }
                     className="min-h-32 border-2 border-gray-200 focus:border-yellow-400 rounded-xl"
+                    required
                   />
                 </div>
 

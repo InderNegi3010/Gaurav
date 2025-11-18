@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { Shield, Award, Sparkles, Clock } from "lucide-react";
 import { Card } from "@/components/ui/card";
+import { SITE_CONFIG } from "@/config";
 
 export default function DriverProfile() {
   const credentials = [
@@ -61,26 +62,24 @@ export default function DriverProfile() {
             <div className="relative inline-block mb-6">
               <div className="w-48 h-48 mx-auto lg:mx-0 rounded-full overflow-hidden border-8 border-yellow-400 shadow-2xl">
                 <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=400&fit=crop"
-                  alt="Inder Singh"
+                  src={SITE_CONFIG.driver.image}
+                  alt={SITE_CONFIG.driver.name}
                   className="w-full h-full object-cover"
                 />
               </div>
               <div className="absolute -bottom-2 -right-2 bg-yellow-400 text-black px-4 py-2 rounded-full font-bold text-sm shadow-lg">
-                5+ Years
+                {SITE_CONFIG.driver.experience}
               </div>
             </div>
 
             <h3 className="text-3xl font-bold text-gray-900 mb-2">
-              Inder Singh
+              {SITE_CONFIG.driver.name}
             </h3>
             <p className="text-xl text-yellow-600 font-semibold mb-4">
-              Experienced Taxi Driver (5+ Years)
+              Professional Taxi Driver
             </p>
             <p className="text-gray-600 leading-relaxed max-w-md mx-auto lg:mx-0">
-              Professional driver with extensive knowledge of city routes.
-              Committed to providing safe, comfortable, and punctual service to
-              all passengers.
+              {SITE_CONFIG.driver.description}
             </p>
           </motion.div>
 

@@ -1,19 +1,10 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Phone, Calendar } from "lucide-react";
+import { Phone, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { SITE_CONFIG, makeCall, openWhatsApp } from "@/config";
 
 export default function HeroSection() {
-  const scrollToBooking = () => {
-    document
-      .getElementById("booking-section")
-      ?.scrollIntoView({ behavior: "smooth" });
-  };
-
-  const handleCall = () => {
-    window.location.href = "tel:+919876543210";
-  };
-
   return (
     <section className="relative h-screen w-full overflow-hidden">
       {/* Background Image with Overlay */}
@@ -43,7 +34,7 @@ export default function HeroSection() {
               className="inline-flex items-center gap-2 bg-yellow-400 text-black px-4 py-2 rounded-full font-semibold text-sm mb-6"
             >
               <span className="w-2 h-2 bg-black rounded-full animate-pulse" />
-              Available 24/7
+              Available {SITE_CONFIG.business.availability}
             </motion.div>
 
             {/* Main Heading */}
@@ -88,22 +79,48 @@ export default function HeroSection() {
               className="flex flex-wrap gap-4"
             >
               <Button
-                onClick={scrollToBooking}
+                onClick={makeCall}
                 size="lg"
                 className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold flex justify-center items-center px-10 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
-                <Calendar className="w-5 h-5 mr-2" />
-                Book Now
+                <Phone className="w-5 h-5 mr-2" />
+                Call Now
               </Button>
               <Button
-                onClick={handleCall}
+                onClick={() => openWhatsApp()}
                 size="lg"
-                variant="outline"
-                className="border-2 flex justify-center items-center border-white text-white hover:bg-white hover:text-black font-semibold px-10 py-4 text-lg rounded-xl backdrop-blur-sm bg-white/10 transition-all duration-300 hover:scale-105"
+                className="bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold flex justify-center items-center px-10 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
-                <Phone className="w-5 h-5 mr-2" />
-                Call Driver
+                <MessageCircle className="w-5 h-5 mr-2" />
+                WhatsApp
               </Button>
+            </motion.div>
+
+            {/* Stats */}
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.9, duration: 0.8 }}
+              className="mt-12 flex flex-wrap gap-8"
+            >
+              <div>
+                <div className="text-3xl font-bold text-yellow-400">
+                  {SITE_CONFIG.stats.customers}
+                </div>
+                <div className="text-gray-300">Happy Customers</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-yellow-400">
+                  {SITE_CONFIG.stats.experience}
+                </div>
+                <div className="text-gray-300">Experience</div>
+              </div>
+              <div>
+                <div className="text-3xl font-bold text-yellow-400">
+                  {SITE_CONFIG.stats.rating}
+                </div>
+                <div className="text-gray-300">Average Rating</div>
+              </div>
             </motion.div>
           </motion.div>
         </div>

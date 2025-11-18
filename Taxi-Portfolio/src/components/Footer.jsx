@@ -1,5 +1,6 @@
 import React from "react";
 import { Car } from "lucide-react";
+import { SITE_CONFIG } from "@/config";
 
 export default function Footer() {
   return (
@@ -12,10 +13,12 @@ export default function Footer() {
               <div className="w-10 h-10 bg-yellow-400 rounded-lg flex items-center justify-center">
                 <Car className="w-6 h-6 text-black" />
               </div>
-              <span className="text-xl font-bold text-yellow-400">TaxiPro</span>
+              <span className="text-xl font-bold text-yellow-400">
+                {SITE_CONFIG.business.name}
+              </span>
             </div>
             <p className="text-gray-400">
-              Your trusted taxi service for safe, reliable, and affordable rides across the city.
+              {SITE_CONFIG.business.tagline} across the city.
             </p>
           </div>
 
@@ -24,7 +27,7 @@ export default function Footer() {
             <h4 className="font-bold text-yellow-400 mb-4">Quick Links</h4>
             <ul className="space-y-2 text-gray-400">
               <li>
-                <a href="#booking-section" className="hover:text-yellow-400 transition-colors">
+                <a href="#contact-section" className="hover:text-yellow-400 transition-colors">
                   Book a Ride
                 </a>
               </li>
@@ -50,10 +53,10 @@ export default function Footer() {
           <div>
             <h4 className="font-bold text-yellow-400 mb-4">Contact</h4>
             <ul className="space-y-2 text-gray-400">
-              <li>Phone: +91 98765 43210</li>
-              <li>Email: inder.taxi@example.com</li>
-              <li>Available: 24/7</li>
-              <li>Location: Delhi, India</li>
+              <li>Phone: {SITE_CONFIG.contact.phoneDisplay}</li>
+              <li>Email: {SITE_CONFIG.contact.email}</li>
+              <li>Available: {SITE_CONFIG.business.availability}</li>
+              <li>Location: {SITE_CONFIG.business.location}</li>
             </ul>
           </div>
         </div>
@@ -64,7 +67,7 @@ export default function Footer() {
         {/* Copyright */}
         <div className="text-center text-gray-400">
           <p>
-            © {new Date().getFullYear()} TaxiPro - Inder Singh. All rights reserved.
+            © {new Date().getFullYear()} {SITE_CONFIG.business.name} - {SITE_CONFIG.driver.name}. All rights reserved.
           </p>
           <p className="text-sm mt-2">
             Built with ❤️ for safe journeys

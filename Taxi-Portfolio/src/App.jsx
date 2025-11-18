@@ -1,21 +1,22 @@
 import React from 'react'
 import HeroSection from "./components/HeroSection";
-import BookingForm from "./components/BookingForm";
-import DriverProfile from "./components/DriverForm";
-import PricingSection from "./components/PricingSection";
+import DriverProfile from "./components/DriverProfile";
+import VehicleSection from "./components/VehicleSection";
+import ServicesSection from "./components/ServicesSection";
 import ReviewsSection from "./components/ReviewsSection";
+import CoverageSection from "./components/CoverageSection";
 import ContactSection from "./components/ContactSection";
 import Footer from "./components/Footer";
 
-
 const App = () => {
   return (
-<div className="min-h-screen bg-[#FAFAF9]">
+    <div className="min-h-screen bg-[#FAFAF9]">
       <HeroSection />
-      <BookingForm />
       <DriverProfile />
-      <PricingSection />
+      <VehicleSection />
+      <ServicesSection />
       <ReviewsSection />
+      <CoverageSection />
       <ContactSection />
       <Footer />
     </div>
