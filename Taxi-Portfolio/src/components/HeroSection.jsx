@@ -10,7 +10,7 @@ export default function HeroSection() {
       {/* Background Image with Overlay */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=1600&h=900&fit=crop"
+          src="/background.jpeg"
           alt="Taxi Driver"
           className="w-full h-full object-cover"
         />
