@@ -79,7 +79,7 @@ export default function HeroSection() {
               className="flex flex-wrap gap-4"
             >
               <Button
-                onClick={makeCall}
+                onClick={() => makeCall()}
                 size="lg"
                 className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold flex justify-center items-center px-6 sm:px-10 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >

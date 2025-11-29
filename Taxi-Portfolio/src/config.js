@@ -9,8 +9,8 @@ export const SITE_CONFIG = {
       "Professional driver with extensive knowledge of city routes. Committed to providing safe, comfortable, and punctual service to all passengers.",
   },
   contact: {
-    phone: "+918078398835",
-    phoneDisplay: "+91 80783 98835",
+    phone: "+918077398835",
+    phoneDisplay: "+91 80773 98835",
     email: "gauravnegi258@gmail.com",
     whatsappMessage:
       "Hi, I want to book a taxi. Please share your availability.",

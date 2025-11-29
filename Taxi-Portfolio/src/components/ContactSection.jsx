@@ -22,7 +22,10 @@ export default function ContactSection() {
   };
 
   return (
-    <section id="contact-section" className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+    <section
+      id="contact-section"
+      className="py-20 px-4 sm:px-6 lg:px-8 bg-white"
+    >
       <div className="container mx-auto max-w-6xl">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
@@ -34,7 +37,9 @@ export default function ContactSection() {
           <h2 className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4">
             Get In Touch
           </h2>
-          <p className="text-xl text-gray-600">We're here to help you {SITE_CONFIG.business.availability}</p>
+          <p className="text-xl text-gray-600">
+            We're here to help you {SITE_CONFIG.business.availability}
+          </p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12">
@@ -59,7 +64,7 @@ export default function ContactSection() {
             {/* Contact Buttons */}
             <div className="space-y-4">
               <Button
-                onClick={makeCall}
+                onClick={() => makeCall()}
                 className="w-full h-16 bg-green-600 hover:bg-green-700 text-white font-semibold text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-[1.02] justify-start px-6"
               >
                 <div className="flex items-center gap-4">
@@ -68,7 +73,9 @@ export default function ContactSection() {
                   </div>
                   <div className="text-left">
                     <div className="text-sm opacity-90">Call Now</div>
-                    <div className="font-bold">{SITE_CONFIG.contact.phoneDisplay}</div>
+                    <div className="font-bold">
+                      {SITE_CONFIG.contact.phoneDisplay}
+                    </div>
                   </div>
                 </div>
               </Button>
@@ -110,7 +117,9 @@ export default function ContactSection() {
               <div className="space-y-2 text-gray-700">
                 <div className="flex justify-between">
                   <span>Monday - Sunday</span>
-                  <span className="font-semibold">{SITE_CONFIG.business.availability}</span>
+                  <span className="font-semibold">
+                    {SITE_CONFIG.business.availability}
+                  </span>
                 </div>
                 <p className="text-sm text-gray-600 mt-3">
                   Available round the clock for your convenience
