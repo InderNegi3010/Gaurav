@@ -12,7 +12,7 @@ export default function HeroSection() {
         <img
           src="/background.jpeg"
           alt="Taxi Driver"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-[linear-gradient(to_right,rgb(0_0_0/0.8),rgb(0_0_0/0.6),rgb(0_0_0/0.4))]" />
       </div>
@@ -81,7 +81,7 @@ export default function HeroSection() {
               <Button
                 onClick={makeCall}
                 size="lg"
-                className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold flex justify-center items-center px-10 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="bg-yellow-400 hover:bg-yellow-500 text-black font-semibold flex justify-center items-center px-6 sm:px-10 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 <Phone className="w-5 h-5 mr-2" />
                 Call Now
@@ -89,7 +89,7 @@ export default function HeroSection() {
               <Button
                 onClick={() => openWhatsApp()}
                 size="lg"
-                className="bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold flex justify-center items-center px-10 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
+                className="bg-[#25D366] hover:bg-[#20BA5A] text-white font-semibold flex justify-center items-center px-6 sm:px-10 py-4 text-lg rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-105"
               >
                 <MessageCircle className="w-5 h-5 mr-2" />
                 WhatsApp

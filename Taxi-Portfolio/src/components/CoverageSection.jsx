@@ -4,17 +4,17 @@ import { MapPin } from "lucide-react";
 
 export default function CoverageSection() {
   const areas = [
-    "Central Delhi",
-    "South Delhi",
-    "North Delhi",
-    "East Delhi",
-    "West Delhi",
-    "Gurgaon",
-    "Noida",
-    "Faridabad",
-    "Ghaziabad",
-    "Greater Noida",
-    "Delhi Airport",
+    "Nanital",
+    "Kachi Dham",
+    "Almora",
+    "Haridwar",
+    "Uttarkashi",
+    "Pithoragarh",
+    "Delhi",
+    "Uttar Pradesh",
+    "Dehradun",
+    "Ramnagar",
+    "Chamoli",
     "Nearby Cities"
   ];
 
@@ -32,7 +32,7 @@ export default function CoverageSection() {
             Coverage Areas
           </h2>
           <p className="text-xl text-gray-600">
-            Serving Delhi NCR and surrounding regions
+            Serving Haldwani and Uttrakhand
           </p>
         </motion.div>
 

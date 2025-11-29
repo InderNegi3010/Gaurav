@@ -1,4 +1,4 @@
-import React from 'react'
+import React from "react";
 import HeroSection from "./components/HeroSection";
 import DriverProfile from "./components/DriverProfile";
 import VehicleSection from "./components/VehicleSection";
@@ -10,7 +10,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <div className="min-h-screen bg-[#FAFAF9]">
+    <div className="min-h-screen bg-[#FAFAF9] overflow-x-hidden">
       <HeroSection />
       <DriverProfile />
       <VehicleSection />
@@ -20,7 +20,7 @@ const App = () => {
       <ContactSection />
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

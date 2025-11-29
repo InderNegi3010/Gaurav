@@ -9,7 +9,7 @@ export default function ReviewsSection() {
     {
       name: "Rajesh Kumar",
       image:
-        "https://images.unsplash.com/photo-1566492031773-4f4e44671857?w=200&h=200&fit=crop",
+        "/Rajesh.jpeg",
       rating: 5,
       review:
         "Excellent service! Inder is very punctual and drives safely. The car was clean and comfortable. Highly recommend for airport trips.",
@@ -18,7 +18,7 @@ export default function ReviewsSection() {
     {
       name: "Priya Sharma",
       image:
-        "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=200&h=200&fit=crop",
+        "/Priya.jpeg",
       rating: 5,
       review:
         "Best taxi service in the city! Very reliable and affordable. I've been using his service for 6 months now. Always on time!",
@@ -27,7 +27,7 @@ export default function ReviewsSection() {
     {
       name: "Amit Patel",
       image:
-        "https://images.unsplash.com/photo-1560250097-0b93528c311a?w=200&h=200&fit=crop",
+        "/Amit.jpeg",
       rating: 5,
       review:
         "Very professional driver. Knows all the shortcuts and always gets me to my destination on time. The SUV is perfect for family trips.",
@@ -36,7 +36,7 @@ export default function ReviewsSection() {
     {
       name: "Sneha Reddy",
       image:
-        "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop",
+        "/Sneha.jpeg",
       rating: 4,
       review:
         "Great experience! Safe driving and friendly nature. Booked for a long trip from Delhi to Jaipur and it was very comfortable.",
