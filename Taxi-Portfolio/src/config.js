@@ -46,8 +46,8 @@ export const SITE_CONFIG = {
       nightCharges: 15,
       waitingCharges: 50,
       intercityRoutes: [
-        { from: "Haldwani", to: "Nanital", price: 3500, distance: "250 km" },
-        { from: "Haldwani", to: "Lakhnow", price: 4500, distance: "280 km" },
+        { from: "Haldwani", to: "Nanital", price: 3200, distance: "42 km" },
+        { from: "Haldwani", to: "Mukteshwar", price: 4500, distance: "70 km" },
         { from: "Haldwani", to: "Anywhere", price: "Negotiable", distance: "" },
       ],
     },
